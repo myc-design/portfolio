@@ -1,0 +1,109 @@
+html {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  color: rgb black;
+}
+body {
+  display: flex;
+  width: 100vh;
+  /* margin: 0 auto; */
+  padding: 20px;
+  height: 100vh;
+  background: linear-gradient(
+      45deg,
+      hotpink 12%,
+      transparent 0,
+      transparent 88%,
+      hotpink 0
+    ),
+    linear-gradient(
+      135deg,
+      transparent 37%,
+      red 0,
+      lightpink 63%,
+      transparent 0
+    ),
+    linear-gradient(45deg, transparent 37%, lightpink 0, 63%, transparent 0)
+      lightpink;
+  background-size: 700px 95px;
+  /* height: 100%; */
+}
+
+header .header-wrapper {
+  display: grid;
+  width: 100vw;
+  /* grid-template-columns: auto min-content 1fr 1fr 0.5fr; */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto 1fr 1fr 1fr;
+  /* align-items: center;
+  justify-content: center;
+  text-align: left; */
+}
+
+.work {
+  grid-row: 1/4;
+  padding: 20px;
+  /* background: navy; */
+  color: transparent;
+  mix-blend-mode: multiply;
+  /* font-size: 20em;
+  font-family: sans-serif; */
+}
+
+h1:nth-child(2) {
+  color: white;
+  writing-mode: vertical-lr;
+  grid-column: 3/4;
+  grid-row: 2/5;
+}
+
+a,
+li {
+  font-size: 1.8em;
+  text-decoration: none;
+  list-style: none;
+  color: black;
+}
+li:hover {
+  border-bottom: 10px solid black;
+}
+
+h1 {
+  background: transparent;
+  color: transparent;
+  mix-blend-mode: multiply;
+  font-size: 20em;
+  font-family: sans-serif;
+}
+
+.project-grid {
+  grid-column: 2/3;
+  grid-row: 1/5;
+  background: lightpink;
+  opacity: 0.8;
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 100px 1fr 100px;
+  grid-template-areas: "";
+}
+
+.arrows {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+}
+a.left-arrow,
+a.right-arrow {
+  padding: 0 20px;
+  height: 35px;
+  background-color: white;
+}
+li.about:hover {
+  visibility: hidden;
+}
+li.about-show {
+}
