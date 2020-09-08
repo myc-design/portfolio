@@ -1,0 +1,72 @@
+:root {
+  --primary-text: rgb(19, 8, 8);
+}
+
+nav {
+  margin: 20px 35px 0 35px;
+}
+
+.accordion {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bolder;
+  color: rgb black;
+  margin: 20px;
+  font-size: 1.8em;
+  text-decoration: none;
+  list-style: none;
+  color: var(--primary-text);
+}
+
+.accordion .panel {
+  /* border: 1px solid black; */
+
+  background: lightpink;
+  opacity: 0.9;
+}
+
+.accordion .panel label {
+  cursor: pointer;
+  display: block;
+  font-weight: bold;
+  position: relative;
+  padding: 10px 20px 10px 34px;
+}
+
+/* arrows */
+.accordion .panel label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 18px;
+  left: 12px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-left: 8px solid red;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion .panel > div {
+  display: none;
+}
+/* check button, change label color */
+.accordion .panel input:checked ~ label {
+  color: var(--primary-text);
+  /* width: 80%; */
+  border-bottom: 8px solid var(--primary-text);
+}
+/* rotate triangle */
+.accordion .panel input:checked ~ label::before {
+  transform: rotate(90deg);
+}
+
+/* expand paragraph when clicked */
+.accordion .panel input:checked ~ div {
+  display: block;
+  padding: 0px 20px 10px 40px;
+  border-bottom: 8px solid var(--primary-text);
+}
